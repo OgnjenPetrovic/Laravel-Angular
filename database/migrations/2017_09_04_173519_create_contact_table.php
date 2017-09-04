@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Contact extends Migration
+class CreateContactTable extends Migration
 {
     /**
      * Run the migrations.
@@ -19,7 +19,7 @@ class Contact extends Migration
             $table->string('last_name');
             $table->string('email');
             $table->timestamps();
-        })
+        });
     }
 
     /**
