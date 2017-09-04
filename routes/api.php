@@ -17,4 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('contacts', 'ContactsController@index'); // gadjamo metodu u tom kontrolleru
+// Route::get('contacts', 'ContactsController@index'); // gadjamo metodu u tom kontrolleru
+// Route::get('contacts/{id}','ContactController@show');
+// Route::delete('contacts/{id}','ContactController@destroy');
+// Route::post('contacts','ContactController@store');
+// Route::put('contacts/{id}','ContactController@update');
+
+Route::resource('contacts','ContactController'); // ovo sada menja sve ovo gore
